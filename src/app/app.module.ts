@@ -13,8 +13,8 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CompnentsModule,
-    PagesModule
+    PagesModule,
+    CompnentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

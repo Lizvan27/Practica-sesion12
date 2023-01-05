@@ -9,6 +9,6 @@ export class HomeComponent {
 
   idiomas = ["Ingles", "Portugues", "Chino"];
   nivel! : String;
-  experiencia = "DIGITEL"
+  experiencia = ["DIGITEL", ]
 
 }
