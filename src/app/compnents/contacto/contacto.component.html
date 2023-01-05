@@ -1,0 +1,32 @@
+<div id="contacto" class="col-12 h-100">
+
+    <div class="row">
+        <div class="col-md-6 col-12">                
+            <form [formGroup]="formContacto" class="form-horizontal" method="post" (ngSubmit)="sendEmail()">
+                
+                <div class="controls">
+                    <label class="control-label" for="name">Nombre</label>
+                    <input id="name" name="name" type="text" placeholder="Ingrese nombre completo" class="form-control" [(ngModel)]="nombre"
+                        required> <!--#name="ngModel"-->
+
+                    <label class="control-label" for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Ejemplo: Vanessa@dafadef.com" class="form-control" [(ngModel)]="email"
+                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required> <!--#email="ngModel"-->
+
+                    <label class="control-label" for="company">Empresa</label>
+                    <input id="empresa" name="empresa" type="text" placeholder="Empresa de interesada en contactar" class="form-control" [(ngModel)]="empresa"
+                        ><!--#email="ngModel"-->
+
+                    <label class=" control-label" for="message">Mensaje</label>
+                    <textarea id="message" class="form-control" name="message" placeholder="Escriba un mensaje ...." rows="10"
+                        [(ngModel)]="message" required> <!-- #message="ngModel"-->
+                    </textarea>
+
+                    <button type="submit" [disabled]="formContacto.invalid" class="col-md-12 btn btn-primary btn-lg mb-4">Enviar</button>
+
+                </div>
+    
+            </form>
+        </div>
+    </div>
+</div>
