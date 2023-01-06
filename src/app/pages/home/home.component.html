@@ -1,62 +1,60 @@
-<div>
-    <app-header></app-header>
-</div>
-<div>
+<div class="container mt-5">
     <div>
-        <h4>Descripci&oacute;n</h4>
-        <p>Soy una persona orientada hacia las metas y objetivos personales como también de la
-            organización, aplicando mis conocimientos y habilidades para el lograr así un trabajo coordinado 
-            que permita el crecimiento de la empresa, así como el mío personal y profesional. </p>
+        <app-header></app-header>
     </div>
-
-    <div>
-        <h4>Formaci&oacute;n Acad&eacute;mica</h4>
+    <div class="row conten mt-3">
         <div>
-            <dl>
-                <dt>INSTITUTO DE LIMA IDAT</dt>
-                <dd>Curso de Diseño y desarrollo WEB</dd>
-            </dl>
+            <h4>Formaci&oacute;n Acad&eacute;mica</h4>
+            <div>
+                <dl>
+                    <dt>INSTITUTO DE LIMA IDAT</dt>
+                    <dd>Curso de Diseño y desarrollo WEB</dd>
+                </dl>
+            </div>
+        </div>
+        <div>
+            <h4>Experiencia Laboral</h4>
+            <div>
+                <dl *ngFor="let exper of experiencia">
+                    <dt>{{exper}}</dt>
+                    <dd>Cargo: Asesor de ventas / Mercado Español</dd>
+                    <dt>MARKETING ALTERNO PERÚ SAC</dt>
+                    <dd>Cargo: Promotora de ventas / Campaña escolar- Marca X-TREM y SAMSONITE</dd>
+                    <dt>DRASAC </dt>
+                    <dd>Cargo: Asesor de ventas </dd>
+                </dl>
+    
+            </div>
+        </div>
+    
+        <div id="idiomas" class="">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Idioma</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let idioma of idiomas">
+                        <td>{{idioma}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div [ngSwitch]="nivel">
+            <span *ngSwitchCase="1">Intermedio</span>
+            <span *ngSwitchCase="2">Basico</span>
+            <span *ngSwitchCase="3">Intermedio</span>
+            <span *ngSwitchCase="4">Intermedio</span>
+            <span *ngSwitchCase="5">Intermedio</span>
+            <span *ngSwitchDefault="">Ingrese el Curso de Interes</span>
         </div>
     </div>
     <div>
-        <h4>Experiencia Laboral</h4>
-        <div>
-            <dl *ngFor="let exper of experiencia">
-                <dt>{{exper}}</dt>
-                <dd>Cargo: Asesor de ventas / Mercado Español</dd>
-                <dt>MARKETING ALTERNO PERÚ SAC</dt>
-                <dd>Cargo: Promotora de ventas / Campaña escolar- Marca X-TREM y SAMSONITE</dd>
-                <dt>DRASAC </dt>
-                <dd>Cargo: Asesor de ventas </dd>
-            </dl>
-
-        </div>
-    </div>
-
-    <div id="idiomas" class="">
-        <table class="">
-            <thead>
-                <tr>
-                    <th>Idioma</th>
-                    <th>Nivel</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let idioma of idiomas">
-                    <td>{{idioma}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div [ngSwitch]="nivel">
-        <span *ngSwitchCase="1">Intermedio</span>
-        <span *ngSwitchCase="2">Basico</span>
-        <span *ngSwitchCase="3">Intermedio</span>
-        <span *ngSwitchCase="4">Intermedio</span>
-        <span *ngSwitchCase="5">Intermedio</span>
-        <span *ngSwitchDefault="">Ingrese el Curso de Interes</span>
+        <a>
+            <button id="btn" href="">Contactame</button>
+        </a>
     </div>
 </div>
-<div>
-    <app-contacto></app-contacto>
-</div>
+

@@ -1,0 +1,14 @@
+.header{
+    background: rgb(153, 103, 29);
+}
+h1{
+    color: rgb(199, 167, 122);
+}
+img{
+    width: 30%;
+    height: 100%;
+}
+#content{
+    margin-left: 10px;
+    padding-bottom: 15px;
+}
